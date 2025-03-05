@@ -26,8 +26,8 @@ if index_name not in [i.name for i in pc.list_indexes()]: # Ensure the index is 
     )
 index = pc.Index(index_name)
 
-model = GPT2LMHeadModel.from_pretrained("gpt2")
-tokenizer = GPT2Tokenizer.from_pretrained("gpt2") # Initialize Hugging Face GPT-2 model
+model = GPT2LMHeadModel.from_pretrained("distilgpt2")
+tokenizer = GPT2Tokenizer.from_pretrained("distilgpt2") # Hugging Face distilgpt2 model
 tokenizer.pad_token = tokenizer.eos_token  # Padding token
 
 def fetch_research_papers(query):

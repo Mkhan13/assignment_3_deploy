@@ -36,7 +36,7 @@ def fetch_research_papers(query):
     '''
 
     base_url = "http://export.arxiv.org/api/query"
-    params = {"search_query": f"all:{query}", "start": 0, "max_results": 50}
+    params = {"search_query": f"all:{query}", "start": 0, "max_results": 15}
     response = requests.get(base_url, params=params)
 
     if response.status_code == 200:
